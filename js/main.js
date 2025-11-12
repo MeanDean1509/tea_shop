@@ -1,5 +1,20 @@
 import {partnerLogos, productList, partnerLogoBasePath} from "./data.js";
-//  parnter logos
+
+// nav
+$(function(){
+   $(".navbar").hidescroll();
+});
+
+// mobile dropdown menu
+const toggleBtn = $("#toggle_btn");
+const dropdownMenu = $(".dropdown-menu");
+
+toggleBtn.click(() => {
+    dropdownMenu.toggleClass("open");
+    
+});
+
+//  partner logos
 
 
 $(function(){

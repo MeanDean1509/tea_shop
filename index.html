@@ -11,12 +11,17 @@
     <!-- Stylesheet -->
 
     <link type="text/css" rel="stylesheet" href="css/responsive-tabs.css" />
+    <link type="text/css" rel="stylesheet" href="css/showHideNav.css" />
     <link href="./dist/output.css" rel="stylesheet">
 
 
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     defer
     ></script>
+
+
+    <script src="js/jquery.hidescroll.js"
+    defer></script>
 
     <script src="js/jquery.responsiveTabs.js"
     defer></script>
@@ -42,13 +47,57 @@
 </head>
 
 <body>
+    <!-- navigation -->
+
+    <header class="relative z-50">
+        <div class="flex items-center justify-center navbar">
+            <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+                <!-- Logo -->
+                 <a href="./" class="flex items-center justify-center flex-none">
+                    <img src="./assets/logo.png" alt="logo" class="w-16 h-16">
+                    <p class="text-lg capitalize font-lobster text-p-900">tea shop</p>
+                 </a>
+                 
+                 <!-- nav link -->
+                  <nav class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8">
+                    <a href="./products.html" class="navLink">
+                        Sản Phẩm
+                    </a>
+                    <a href="./#story" class="navLink">
+                        Giới Thiệu
+                    </a>
+                    <a href="./#contact" class="navLink">
+                        Liên Hệ
+                    </a>
+                  </nav>
+
+                  <!-- hamburger menu -->
+                   <div class="block cursor-pointer lg:hidden " id="toggle_btn">
+                    <img src="./assets/Menu Icon.svg" alt="hamburger menu" class="size-5">
+                   </div>
+
+                   <!-- mobile menu -->
+                    <div class="dropdown-menu lg:hidden">
+                        <a href="./products.html" class="navLink mobileNavLink">
+                            Sản Phẩm
+                        </a>
+                        <a href="./#story" class="navLink mobileNavLink">
+                            Giới Thiệu
+                        </a>
+                        <a href="./#contact" class="navLink mobileNavLink">
+                            Liên Hệ
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </header>
     <!-- 
     hero -->
     <section id="hero" class="h-screen max-h-[1100px] bg-gradient-to-t from-p-100 to-white overflow-y-clip ">
          <div class="container relative flex items-center justify-center w-full h-full xl:justify-start">
             <!-- Hình -->
             <div class="absolute bottom-0 right-0 z-0 overflow-hidden md:-bottom-40 xl:top-1/2 xl:-translate-y-1/2">
-                <img class="" src="./assets/hero_img.png" alt="hero-img">
+                <img class="2xl:[mask-image:linear-gradient(to_left,transparent,black_10%)]" src="./assets/hero_img.png" alt="hero-img">
             </div>
 
             <!-- Intro -->
